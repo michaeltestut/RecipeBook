@@ -1,0 +1,135 @@
+*{
+    margin-left:20px;
+    margin-right: 20px;
+}
+header{
+    display:flex;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+main{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.login_register{
+    border:2px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 200px;
+    padding: 30px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+label{
+    margin-top:10px;
+}
+
+.submit{
+    margin-top:10px;
+    border: 2px solid blue;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 20px;
+}
+
+.login{
+    height:300px;
+}
+
+.errors{
+    border: 2px solid red;
+    background-color: white;
+    color:black;
+    width: 300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.success{
+    background-color: white;
+    border: 2px solid green;
+    width: 300px;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+button{
+    margin-right: 3em;
+}
+
+.errors p{
+    text-align: center;
+}
+
+h2{
+    color:navy;
+}
+
+
+h1{
+    text-align: left;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header button{
+    margin: 10px;
+}
+
+.buttons{
+    display:flex;
+    align-items: center;
+}
+
+.mytable{
+    width: 800px;
+    background-color: whitesmoke;
+}
+
+.add_recipe{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.radio_group{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.add_btn{
+    color:blue;
+    background-color: white;
+    width: 100px;
+    margin-top: 10px;
+    align-self: center;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+.form_date{
+    width: 130px;
+}
+
+h4{
+    color:darkblue;
+}

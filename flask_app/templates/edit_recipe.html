@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Edit Recipe</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Edit Recipe</h1>
+        <div class="buttons">
+            <form action="/redirect" method="post">
+                <button>Dashboard</button>
+            </form>
+            <form action="/logout" method="post">
+                <button>Logout</button>
+            </form>
+        </div>
+    </header>
+    <div class="content">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="errors">
+                    {% for m in messages %}
+                        <h4>{{m}}</h4>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <form action="/update/{{recipe.id}}" class="add_recipe" method="post">
+        <label for="recipe_name">Name:</label>
+        <input type="text" name="recipe_name" value="{{recipe.recipe_name}}">
+        <label for="description">Description:</label>
+        <input type="text" name="description" value="{{recipe.description}}">
+        <label for="instructions">Instructions:</label>
+        <textarea name="instructions" cols="30" rows="10">{{recipe.instructions}}</textarea>
+        <label for="date_made">Date made:</label>
+        <input type="date" class="form_date" name="date_made" value="{{recipe.date_made}}">
+        <div class="form_group">
+            <p>Under 30 minutes?</p>
+            <div class="radio_group">
+                <label for="1">Yes</label>
+                <input type="radio" name="time" value=1>
+            </div>
+            <div class="radio_group">
+                <label for="0">No</label>
+                <input type="radio" name="time" value=0>
+            </div>
+        </div>
+        <input type="submit" class="add_btn" value="Update Recipe">
+    </form>
+</body>
+</html>
